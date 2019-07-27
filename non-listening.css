@@ -1,64 +1,50 @@
 html {
-  box-sizing: border-box;
+  box-sizing: border-box; /*Sweet sanity*/
 }
 
+/*General stuff*/
 body {
   background-color: #23272A;
   width: 100%;
   margin: 0 auto;
   color: #FFF;
   font-family: "Tahoma", "Arial", sans-serif;
-  line-height: 1.25;
+  line-height: 1.25; /*Prettier line spacing*/
 }
-
 header, section, footer {
   clear: both;
   width: 80%;
   margin-left: 10%;  margin-right: 10%;
 }
-
 h1 {
   font-size: 3em;
 }
-
 p, h3 {
-  font-size: 1.25em;
+  font-size: 1.25em; /*Makes h3 match text size*/
 }
 
-footer .smalltext {
-  clear: both;
-  font-size: xx-small;
-}
-footer p {
-  font-size: small;
-}
-
-footer .headshot {
-  margin: 0 1em 0 0;
-  height: 4em;
-  float: left;
-}
-
+/*Text emphasis for listening and non-listening type labels*/
 .nonlisteningtype {
-  font-weight: 600;
+  font-weight: bold;
   color: rgb(119,43,35);
 }
 .listeningtype {
-  font-weight: 600;
+  font-weight: bold;
   color: rgb(17,48,103);
 }
 
-.introduction .infowindow .typeimage {
+/*Two types of formatting for disgram images*/
+.wideimage {
   width: 100%;
 }
-.introduction .infowindow .messageimage {
+.smallimage {
   width: 50%;
-  margin-left: 25%;  margin-right: 25%;
+  min-width: 300px;
 }
 
+/*Formates header bar cells for the non-listening types*/
 .nl-type {
-  background-color: none;
-  text-align: center;
+  text-align: center; /*Center-aligns the number box*/
 }
 .number {
   padding: 0.5em 1.5em 0.5em 1.5em;
@@ -75,9 +61,6 @@ footer .headshot {
 .diagramcell {
   padding: 0.25em 1.5em 0.25em 1.5em;
   width: 50%;
-  display: inline-block;
-  font-size: medium;
-  font-weight: bold;
 }
 .cells .nonlistening {
   background-color: rgb(148,54,44);
@@ -88,10 +71,18 @@ footer .headshot {
   border-top-right-radius: 10px;
 }
 
-/*Changes things for the intro box*/
-/* #disruption .number {
-  visibility: hidden;
-} */
+/*Makes the side-by-side h2 and p elements match*/
+.cells h2, .cells p {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+/*Changes things for the intro section*/
 .introduction .listening {
   border-top-left-radius: 10px;
   width: 100%;
@@ -99,26 +90,21 @@ footer .headshot {
 .introduction .nonlistening {
   display: none;
 }
+
 /*Changes things for the disruption (non)listening type*/
 #disruption .number {
   visibility: hidden;
+}
+#disruption .listening {
+  display: none;
 }
 #disruption .nonlistening {
   border-top-right-radius: 10px;
   width: 100%;
 }
-#disruption .listening {
-  display: none;
-}
 
-
-/*Makes the font grow on the hovered (non)listening type*/
-.cells:hover p, .cells:hover h3 {
-  font-size: 1.5em;
-}
-
-.infowindow {
-  /*display: none; /*Change this in JS later*/
+/*Areas  with text and images found under each header bar*/
+.textwindow {
   padding: 0.5em 5% 0.5em 5%;
   background-color: #FFF;
   color: #222;
@@ -126,28 +112,50 @@ footer .headshot {
   margin-bottom: 1em;
   padding-bottom: 1em;
 }
-.nl-type .infowindow img {
-  float: left;
-  width: 40%;
-  margin-right: 1em;
-  margin-bottom: 1em;
+.textwindow .description {
+  text-align: center; /*This keeps all images centered*/
 }
-.infotype .description {
-  padding: 0.5em;
-  min-width: 50%;
+.textwindow .description p, .textwindow .description h3 {
+  text-align: left; /*And this UN-centers the text*/
 }
-.infowindow .quote {
+
+/*Formats the quotes found in each section*/
+.quote {
   clear: both;
   text-align: center;
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  padding: 0 10% 0 10%;
 }
-.infowindow .quoteattr {
+.quote .quoteattr {
   color: rgb(21,59,127);
   font-style: italic;
 }
-.infowindow .quotetext {
+.quote .quotetext {
   color: #666;
-  padding: 0 10% 0 10%;
+}
+
+/*Footer elements*/
+footer .smalltext {
+  clear: both;
+  font-size: xx-small;
+}
+footer p {
+  font-size: small;
+}
+
+footer .headshot {
+  margin: 0 1em 0 0;
+  height: 4em;
+  float: left;
+}
+
+/*Makes font grow on hovered (non)listening type header bars*/
+.nl-type:hover .cells p, .nl-type:hover .cells h2 {
+  font-size: 1.75em;
+}
+
+/*Edit this to hide/show the non-listening sections*/
+.nl-type .textwindow {
+  /*display: none; /*Change this via JS later*/
 }
