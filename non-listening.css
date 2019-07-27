@@ -1,0 +1,94 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #23272A;
+  width: 100%;
+  margin: 0 auto;
+  color: #EEE;
+  font-family: "Tahoma", "Arial", sans-serif;
+}
+
+.diagram {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.highlight {
+  padding: 0 1em 1em 1em;
+  background-color: none;
+}
+.number {
+  padding: 0.5em;
+  background-color: grey;
+  position: relative;
+  top: 1em;
+  left: -0.5em;
+  border-radius: 10px;
+}
+.diagramcell, h3 {
+  padding: 0.5em 1.5em 0.5em 1.5em;
+  font-size: medium;
+  font-weight: bold;
+}
+.nonlistening, h3 {
+  background-color: darkred;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.listening {
+  background-color: navy;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/*Changes things for the disruption (non)listening type)*/
+#disruption .number {
+  visibility: hidden;
+}
+#disruption .diagramcell {
+  line-height: 200%;
+  border-radius: 10px
+}
+
+/*Makes the font grow on the hovered (non)listening type*/
+.highlight:hover p {
+  font-size: xx-large;
+}
+
+.infowindow {
+  padding: 0 10% 0 10%;
+}
+.infowindow  h3 {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.infotype {
+  background-color: #DDD;
+  color: #222;
+}
+.infotype img {
+  float: left;
+  width: 15em;
+  height: 8em;
+  background-color: pink;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.infotype .description {
+  padding: 0.5em;
+}
+.infotype .quote {
+  clear: both;
+  text-align: center;
+}
+.infotype .quoteattr {
+  font-style: italic;
+}
+.infotype .quotetext {
+  padding-bottom: 1em;
+}
