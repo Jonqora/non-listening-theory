@@ -49,6 +49,7 @@ p, h3 {
 .number {
   padding: 0.5em 1.5em 0.5em 1.5em;
   background-color: grey;
+  font-size: 1.25em;
   position: relative;
   top: 0.5em;
   border-radius: 10px;
@@ -151,8 +152,11 @@ footer .headshot {
 }
 
 /*Makes font grow on hovered (non)listening type header bars*/
-.nl-type:hover .cells p, .nl-type:hover .cells h2 {
+.nl-type .headerbar:hover .cells p, .nl-type .headerbar:hover .cells h2 {
   font-size: 1.75em;
+}
+.nl-type .headerbar:hover, .nl-type .headerbar:hover {
+  cursor: pointer;
 }
 
 /*Edit this to hide/show the non-listening sections*/
