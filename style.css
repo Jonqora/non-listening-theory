@@ -22,6 +22,9 @@ h1 {
 p, h3 {
   font-size: 1.25em; /*Makes h3 match text size*/
 }
+a:link, a:active, a:visited {
+  color:inherit;
+}
 
 /*Text emphasis for listening and non-listening type labels*/
 .nonlisteningtype {
@@ -138,17 +141,21 @@ p, h3 {
 }
 
 /*Footer elements*/
+.clearboth {
+  clear: both;
+}
 footer .smalltext {
   clear: both;
   font-size: xx-small;
 }
 footer p {
   font-size: small;
+  margin-top: 0;
 }
 
 footer .headshot {
   margin: 0 1em 0 0;
-  height: 4em;
+  height: 6em;
   float: left;
 }
 
